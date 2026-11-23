@@ -1,19 +1,18 @@
 #  A Small language-model lab
 
-Train a compact story-completion model from random weights, inspect its learning curves,
-and compare cached decoding with ordinary decoding. This is an educational language
-model, not a general-purpose chatbot.
+## Model
 
-The default configuration uses three decoder blocks, three attention heads, a
-192-dimensional hidden representation, a 512-token byte-level BPE vocabulary and
-256-token context. Token embeddings and the output layer share weights. RoPE replaces
-learned position embeddings; an optional learned-position configuration supports a baseline.
-KV caching reuses attention keys and values during generation without adding parameters.
+A small GPT-style language model trained from scratch on TinyStories.
 
-**Included:** actual TinyStories weights trained for 2,000 CPU steps; 1,433,280 parameters.
-Best measured validation loss: **2.6402**. This is a limited-budget early
-checkpoint, with quality limitations documented in `MODEL_CARD.md`. Seven automated tests
-passed. All reported results belong to this run.
+- 1.43 million parameters
+- 3 transformer layers and 3 attention heads
+- RoPE positional embeddings and KV caching
+- Trained for 2,000 steps on a subset of 10,000 stories
+- Validation loss: 2.6402
+
+The trained checkpoint is included in `checkpoints/tiny/best.pt`.
+It can generate short text, though grammar and story consistency
+need improvement with further training.
 
 ![Measured training losses](docs/training_loss.png)
 
