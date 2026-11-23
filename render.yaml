@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: small-language-model
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: TORCH_NUM_THREADS
+        value: "2"
+      - key: STORYGPT_DEVICE
+        value: cpu

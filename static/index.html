@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Give a small language model the first line, and see where the story goes.">
+  <title>Little Stories · Small Language Model</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="/" aria-label="Little Stories home"><span class="brand-icon" aria-hidden="true">✦</span> Little Stories</a><span class="header-note">A small language model experiment</span></header>
+    <main>
+      <section class="intro"><p class="eyebrow">A LITTLE PROMPT. A NEW POSSIBILITY.</p><h1>Every story starts<br>with <em>a little spark.</em></h1><p>Write the opening line. Let a tiny language model imagine what happens next.</p></section>
+      <div class="workspace">
+        <section class="panel editor" aria-labelledby="editor-title">
+          <div class="panel-heading"><h2 id="editor-title">Start your story</h2><span class="pill">Your imagination</span></div>
+          <form id="story-form">
+            <label for="prompt">The opening line</label>
+            <textarea id="prompt" name="prompt" maxlength="500" rows="6" required placeholder="A little rabbit found a key beneath an old oak tree…"></textarea>
+            <div class="field-meta"><span>One or two sentences work best.</span><span id="count">0 / 500</span></div>
+            <p class="suggestion-label">Need a starting point?</p>
+            <div class="suggestions">
+              <button type="button" class="suggestion" data-prompt="A little rabbit found a golden key in the garden.">The golden key</button>
+              <button type="button" class="suggestion" data-prompt="One morning, Lily found a small bird outside her window.">An unexpected friend</button>
+              <button type="button" class="suggestion" data-prompt="Tom built a little boat and took it to the river.">The little boat</button>
+            </div>
+            <div class="controls">
+              <div><label for="length">Story length</label><select id="length"><option value="60">Short · 60 tokens</option><option value="100" selected>Medium · 100 tokens</option><option value="180">Long · 180 tokens</option></select></div>
+              <div><label for="temperature">Creativity <output id="temperature-value" for="temperature">0.8</output></label><input id="temperature" type="range" min="0.2" max="1.2" value="0.8" step="0.1"><div class="range-labels"><span>Focused</span><span>Playful</span></div></div>
+            </div>
+            <button class="generate" id="generate" type="submit"><span aria-hidden="true">✦</span> <span id="generate-label">Generate story</span></button>
+            <p id="error" role="alert" hidden></p>
+          </form>
+        </section>
+        <section class="panel result" aria-labelledby="result-title" aria-busy="false">
+          <div class="panel-heading"><h2 id="result-title">Your little story</h2><button class="copy" id="copy" disabled type="button">Copy text</button></div>
+          <div class="paper">
+            <div id="empty"><div class="book" aria-hidden="true">✧</div><h3>A blank page, for now.</h3><p>Your story will appear here.<br>Start with something small.</p></div>
+            <p id="story" hidden></p>
+          </div>
+          <p id="status" class="result-status" role="status" aria-live="polite">Ready when you are.</p>
+        </section>
+      </div>
+      <p class="model-note"><strong>Small model, still learning.</strong> This 1.43M-parameter model was trained on TinyStories. It can make grammar mistakes or lose track of a story. Tokens are pieces of words; the story may end before your chosen limit.</p>
+    </main>
+    <footer><span>Made for curious minds.</span><a href="https://github.com/rahul138188-ops/Small-language-Model" target="_blank" rel="noopener noreferrer">View the project on GitHub</a></footer>
+  </div>
+</body>
+</html>

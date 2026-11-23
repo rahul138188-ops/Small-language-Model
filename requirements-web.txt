@@ -1,0 +1,4 @@
+torch>=2.5,<3
+tokenizers>=0.20,<1
+fastapi>=0.115,<1
+uvicorn>=0.30,<1

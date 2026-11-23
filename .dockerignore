@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!requirements-web.txt
+!model.py
+!generate.py
+!web_app.py
+!static/
+!static/**
+!checkpoints/
+!checkpoints/tiny/
+!checkpoints/tiny/best.pt
