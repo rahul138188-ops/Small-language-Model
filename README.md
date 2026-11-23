@@ -1,4 +1,4 @@
-# StoryForge — a small language-model lab
+#  A Small language-model lab
 
 Train a compact story-completion model from random weights, inspect its learning curves,
 and compare cached decoding with ordinary decoding. This is an educational language
