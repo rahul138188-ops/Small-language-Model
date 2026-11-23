@@ -1,0 +1,13 @@
+{
+  "source": "roneneldan/TinyStories",
+  "vocab_size": 512,
+  "tokens": {
+    "train": 3759687,
+    "val": 337282
+  },
+  "stories": {
+    "train": 10000,
+    "val": 1000
+  },
+  "tokenizer_sha256": "48a2f46ab4f81cb59d3f7b028b793d172c78c4cc3f5d89438a03f533a3c7c5d0"
+}

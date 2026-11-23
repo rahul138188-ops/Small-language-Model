@@ -1,0 +1,21 @@
+{
+  "arguments": {
+    "data": "data/tinystories",
+    "out": "checkpoints/tiny",
+    "config": "configs/tiny.json",
+    "steps": 2000,
+    "batch_size": 4,
+    "accumulation": 1,
+    "lr": 0.0003,
+    "eval_every": 250,
+    "eval_batches": 20,
+    "device": "auto",
+    "seed": 42,
+    "resume": null,
+    "label": "tinystories-10k-cpu-2000steps"
+  },
+  "device": "cpu",
+  "elapsed_seconds": 363.80376625061035,
+  "parameters": 1433280,
+  "status": "completed"
+}

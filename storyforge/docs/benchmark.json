@@ -1,0 +1,12 @@
+{
+  "uncached": {
+    "tokens_per_second": 256.12574954695714,
+    "seconds": 0.7496317740001359
+  },
+  "cached": {
+    "tokens_per_second": 518.0461707353045,
+    "seconds": 0.3706233360001079
+  },
+  "identical_greedy_tokens": true,
+  "note": "Window rebuilds after context limit; speed is hardware and prompt dependent."
+}

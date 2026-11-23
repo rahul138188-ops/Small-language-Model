@@ -1,0 +1,21 @@
+{
+  "arguments": {
+    "data": "data/demo",
+    "out": "checkpoints/demo_run",
+    "config": "configs/demo.json",
+    "steps": 100,
+    "batch_size": 4,
+    "accumulation": 1,
+    "lr": 0.0003,
+    "eval_every": 25,
+    "eval_batches": 4,
+    "device": "auto",
+    "seed": 42,
+    "resume": null,
+    "label": "synthetic-integration-demo"
+  },
+  "device": "cpu",
+  "elapsed_seconds": 5.0508294105529785,
+  "parameters": 1404672,
+  "status": "completed"
+}

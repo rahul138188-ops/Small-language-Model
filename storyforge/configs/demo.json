@@ -1,0 +1,9 @@
+{
+  "vocab_size": 512,
+  "context_length": 64,
+  "dim": 192,
+  "heads": 3,
+  "layers": 3,
+  "dropout": 0.1,
+  "position": "rope"
+}
