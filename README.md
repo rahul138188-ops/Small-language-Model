@@ -197,9 +197,4 @@ model card with the real dataset, step count, validation loss and hardware befor
 it as a trained story model. The checkpoint embeds its matching tokenizer, so consumers
 do not need your tokenized dataset to run inference.
 
-## Acknowledgments
 
-Inspired by [turancannb02/minigpt](https://github.com/turancannb02/minigpt).
-This implementation and README were newly written with AI assistance. Retain attribution
-and describe your own experiments honestly. See `ATTRIBUTION.md` for dataset and architecture
-references. No original repository checkpoint is bundled.
