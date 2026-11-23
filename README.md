@@ -36,13 +36,16 @@ https://pytorch.org/get-started/locally/ before the other dependencies.
 For Colab, enable a GPU runtime and use `colab_train.ipynb`.
 Internet is needed for initial dependencies and the TinyStories dataset.
 
-## Try the included model
+## Try the model
 
-The limited TinyStories checkpoint is at `checkpoints/tiny/best.pt`.
-Its run uses 10,000 training stories, 1,000 validation stories, 2,000 optimizer steps,
-batch size 4 and no gradient accumulation (2,048,000 training-token positions).
-This is a much smaller training budget than a run with effective batch 64.
-It is an early checkpoint, not a claim of fluent story generation:
+The trained model is saved at `checkpoints/tiny/best.pt`.
+
+It was trained for 2,000 steps with a batch size of 4, using
+10,000 training stories and 1,000 validation stories.
+It can continue a story from a prompt, but sometimes makes
+grammar mistakes or loses track of the story.
+
+Run this command to try it:
 
 
 ```bash
