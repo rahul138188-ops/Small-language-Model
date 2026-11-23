@@ -15,7 +15,7 @@ Best measured validation loss: **2.6402**. This is a limited-budget early
 checkpoint, with quality limitations documented in `MODEL_CARD.md`. Seven automated tests
 passed. All reported results belong to this run.
 
-![Measured training losses](/docs/training_loss.png)
+![Measured training losses](docs/training_loss.png)
 
 ## Install
 
